@@ -5,129 +5,199 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Trang giới thiệu mẫu được xây dựng bằng Tailwind CSS và JavaScript."
+      content="Một góc nhỏ giới thiệu về [Tên bạn ấy], những điều bạn ấy yêu thích và các khoảnh khắc đáng nhớ."
     />
-    <title>Trang giới thiệu của tôi</title>
+    <meta name="theme-color" content="#f7f5ef" />
+    <title>Làm quen với [Tên bạn ấy] — một người thật đặc biệt</title>
   </head>
-  <body class="min-h-screen bg-slate-50 text-slate-800 antialiased">
-    <header
-      class="mx-auto flex max-w-5xl items-center justify-between px-6 py-6"
-    >
-      <a class="text-lg font-bold text-blue-600" href="#home">Xin chào</a>
-      <nav aria-label="Điều hướng chính" class="flex gap-6 text-sm text-slate-600">
-        <a class="hover:text-blue-600" href="#products">Sản phẩm</a>
-        <a class="hover:text-blue-600" href="#about">Giới thiệu</a>
-        <a class="hover:text-blue-600" href="#contact">Liên hệ</a>
+  <body class="min-h-screen bg-[#f7f5ef] text-[#20251f] antialiased">
+    <header class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 sm:px-10">
+      <a class="font-serif text-xl font-bold tracking-tight" href="#home">
+        một chút về <span class="text-[#e76f51]">bạn</span>
+      </a>
+      <nav aria-label="Điều hướng chính" class="flex items-center gap-3 text-xs sm:gap-8 sm:text-sm">
+        <a class="transition-colors hover:text-[#e76f51]" href="#story">Câu chuyện</a>
+        <a class="transition-colors hover:text-[#e76f51]" href="#moments">Khoảnh khắc</a>
+        <a class="transition-colors hover:text-[#e76f51]" href="#connect">Kết nối</a>
       </nav>
     </header>
 
-    <main id="home" class="mx-auto mb-16 mt-6 w-[min(100%-2rem,50rem)]">
+    <main id="home" class="mx-auto max-w-6xl px-6 sm:px-10">
       <section
         aria-labelledby="hero-title"
-        class="rounded-3xl bg-gradient-to-br from-blue-100 via-blue-50 to-white px-6 py-16 text-center sm:px-10"
+        class="grid min-h-[72vh] items-center gap-12 py-14 md:grid-cols-[1.05fr_0.95fr] md:py-20"
       >
-        <p class="text-xs font-bold tracking-[0.12em] text-blue-600">
-          TRANG WEB ĐẦU TIÊN
-        </p>
-        <h1
-          id="hero-title"
-          class="mx-auto mt-4 max-w-2xl text-4xl font-bold leading-tight text-slate-900 sm:text-5xl"
-        >
-          Chào mừng bạn đến với trang của tôi
-        </h1>
-        <p class="mx-auto mb-7 mt-4 max-w-xl leading-7 text-slate-600">
-          Đây là một website giới thiệu nhỏ, được tạo bằng Tailwind CSS và
-          JavaScript. Hãy bấm nút bên dưới để thử tương tác đầu tiên.
-        </p>
-        <button
-          id="greet-button"
-          class="rounded-full bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-700 focus:outline-2 focus:outline-offset-2 focus:outline-blue-600"
-          type="button"
-        >
-          Đổi lời chào
-        </button>
-        <p id="greeting" aria-live="polite" class="mt-4 min-h-6 font-medium text-blue-700"></p>
+        <div class="reveal">
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.24em] text-[#e76f51]">
+            Một trang dành riêng cho một người đặc biệt
+          </p>
+          <h1 id="hero-title" class="max-w-2xl font-serif text-5xl leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl">
+            Làm quen với<br />
+            <span class="text-[#e76f51]">[Tên bạn ấy].</span>
+          </h1>
+          <p class="mt-7 max-w-lg text-lg leading-8 text-[#62675f]">
+            Một vài dòng để kể về con người, những điều yêu thích và các khoảnh khắc nhỏ làm nên bạn ấy.
+          </p>
+          <a
+            class="mt-8 inline-flex items-center gap-3 rounded-full bg-[#253b31] px-6 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#365344] focus:outline-2 focus:outline-offset-4 focus:outline-[#253b31]"
+            href="#story"
+          >
+            Khám phá câu chuyện
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+
+        <figure class="portrait-frame reveal reveal-delay-1">
+          <img
+            class="portrait-image"
+            src="/images/portrait.svg"
+            alt="Hình minh họa chân dung — thay bằng ảnh của bạn ấy"
+            width="720"
+            height="820"
+          />
+          <figcaption class="portrait-caption">
+            <span class="text-xs uppercase tracking-[0.16em]">Nhân vật chính</span>
+            <span class="font-serif text-2xl">[Tên bạn ấy]</span>
+          </figcaption>
+          <span aria-hidden="true" class="portrait-sticker">rất<br />đáng mến ✳</span>
+        </figure>
       </section>
 
       <section
-        id="products"
-        aria-labelledby="products-title"
-        class="mt-12"
+        id="story"
+        aria-labelledby="story-title"
+        class="grid gap-8 border-t border-[#dcd9cf] py-20 md:grid-cols-[0.7fr_1.3fr] md:gap-20 md:py-28"
       >
-        <div class="mb-5">
-          <p class="text-sm font-semibold text-blue-600">SẢN PHẨM NỔI BẬT</p>
-          <h2 id="products-title" class="mt-2 text-2xl font-bold text-slate-900">
-            Một vài món đồ bạn có thể thích
+        <div class="reveal">
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#e76f51]">01 / Câu chuyện</p>
+          <h2 id="story-title" class="mt-4 font-serif text-4xl leading-tight sm:text-5xl">
+            Một người,<br />nhiều điều hay.
           </h2>
         </div>
+        <div class="reveal reveal-delay-1">
+          <p class="max-w-2xl text-xl leading-9 text-[#41483f]">
+            [Viết vài câu giới thiệu bạn ấy: tính cách, điều bạn ngưỡng mộ, hoặc một câu chuyện đáng nhớ.]
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <span class="rounded-full border border-[#c9c9bc] px-4 py-2 text-sm text-[#596056]">[Điều bạn ấy yêu thích]</span>
+            <span class="rounded-full border border-[#c9c9bc] px-4 py-2 text-sm text-[#596056]">[Một nét tính cách]</span>
+            <span class="rounded-full border border-[#c9c9bc] px-4 py-2 text-sm text-[#596056]">[Một sở thích]</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="moments" aria-labelledby="moments-title" class="pb-20 md:pb-28">
+        <div class="mb-9 flex flex-wrap items-end justify-between gap-4 reveal">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#e76f51]">02 / Album nhỏ</p>
+            <h2 id="moments-title" class="mt-3 font-serif text-4xl sm:text-5xl">Vài khoảnh khắc đáng nhớ</h2>
+          </div>
+          <p class="max-w-xs text-sm leading-6 text-[#62675f]">
+            Mỗi bức ảnh là một mảnh nhỏ trong câu chuyện của bạn ấy.
+          </p>
+        </div>
+
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white">
-            <img
-              class="h-48 w-full bg-slate-100 object-cover"
-              src="/images/headphones.svg"
-              alt="Minh họa tai nghe chụp tai màu xanh"
-              width="600"
-              height="400"
-            />
-            <div class="p-5">
-              <h3 class="font-bold text-slate-900">Tai nghe không dây</h3>
-              <p class="mt-2 text-sm leading-6 text-slate-600">
-                Âm thanh sống động, đệm tai êm và pin dùng cả ngày.
-              </p>
+          <figure class="memory-card reveal">
+            <div class="memory-image-wrap">
+              <img
+                class="memory-image"
+                src="/images/moment-one.svg"
+                alt="Ảnh minh họa khoảnh khắc đầu tiên"
+                width="640"
+                height="480"
+                loading="lazy"
+              />
+              <span class="memory-number">01</span>
             </div>
-          </article>
+            <figcaption class="pt-4">
+              <h3 class="font-serif text-xl">[Tên khoảnh khắc đầu tiên]</h3>
+              <p class="mt-1 text-sm leading-6 text-[#62675f]">[Một dòng caption kể về bức ảnh này.]</p>
+            </figcaption>
+          </figure>
 
-          <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white">
-            <img
-              class="h-48 w-full bg-slate-100 object-cover"
-              src="/images/bottle.svg"
-              alt="Minh họa bình nước giữ nhiệt màu cam"
-              width="600"
-              height="400"
-            />
-            <div class="p-5">
-              <h3 class="font-bold text-slate-900">Bình giữ nhiệt</h3>
-              <p class="mt-2 text-sm leading-6 text-slate-600">
-                Gọn nhẹ, dễ mang theo và giữ đồ uống nóng hoặc lạnh.
-              </p>
+          <figure class="memory-card reveal reveal-delay-1">
+            <div class="memory-image-wrap">
+              <img
+                class="memory-image"
+                src="/images/moment-two.svg"
+                alt="Ảnh minh họa khoảnh khắc thứ hai"
+                width="640"
+                height="480"
+                loading="lazy"
+              />
+              <span class="memory-number">02</span>
             </div>
-          </article>
+            <figcaption class="pt-4">
+              <h3 class="font-serif text-xl">[Tên khoảnh khắc thứ hai]</h3>
+              <p class="mt-1 text-sm leading-6 text-[#62675f]">[Một dòng caption kể về bức ảnh này.]</p>
+            </figcaption>
+          </figure>
 
-          <article class="overflow-hidden rounded-2xl border border-slate-200 bg-white">
-            <img
-              class="h-48 w-full bg-slate-100 object-cover"
-              src="/images/backpack.svg"
-              alt="Minh họa ba lô du lịch màu xanh lá"
-              width="600"
-              height="400"
-            />
-            <div class="p-5">
-              <h3 class="font-bold text-slate-900">Ba lô dạo phố</h3>
-              <p class="mt-2 text-sm leading-6 text-slate-600">
-                Thiết kế đơn giản, nhiều ngăn tiện dụng cho mỗi ngày.
-              </p>
+          <figure class="memory-card reveal reveal-delay-2">
+            <div class="memory-image-wrap">
+              <img
+                class="memory-image"
+                src="/images/moment-three.svg"
+                alt="Ảnh minh họa khoảnh khắc thứ ba"
+                width="640"
+                height="480"
+                loading="lazy"
+              />
+              <span class="memory-number">03</span>
             </div>
-          </article>
+            <figcaption class="pt-4">
+              <h3 class="font-serif text-xl">[Tên khoảnh khắc thứ ba]</h3>
+              <p class="mt-1 text-sm leading-6 text-[#62675f]">[Một dòng caption kể về bức ảnh này.]</p>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       <section
-        id="about"
-        aria-labelledby="about-title"
-        class="mt-6 rounded-2xl border border-slate-200 bg-white p-8"
+        id="connect"
+        aria-labelledby="connect-title"
+        class="mb-10 overflow-hidden rounded-[2rem] bg-[#253b31] px-7 py-12 text-white sm:px-12 sm:py-16"
       >
-        <h2 id="about-title" class="text-xl font-bold text-slate-900">
-          Về trang web này
-        </h2>
-        <p class="mt-3 leading-7 text-slate-600">
-          HTML tạo cấu trúc và nội dung. Tailwind CSS giúp định dạng bằng các
-          class tiện ích. JavaScript xử lý hành động khi bạn bấm nút.
-        </p>
+        <div class="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
+          <div class="reveal">
+            <p class="text-xs font-bold uppercase tracking-[0.2em] text-[#f2a58e]">03 / Kết nối</p>
+            <h2 id="connect-title" class="mt-4 max-w-xl font-serif text-4xl leading-tight sm:text-5xl">
+              Theo dõi hành trình của bạn ấy.
+            </h2>
+            <p class="mt-4 max-w-lg leading-7 text-white/70">
+              Ghé qua các trang cá nhân của bạn ấy — thay liên kết trong <code class="rounded bg-white/10 px-1.5 py-0.5 text-sm">main.js</code> để các nút hoạt động.
+            </p>
+          </div>
+          <nav aria-label="Mạng xã hội" class="flex flex-wrap gap-3 reveal reveal-delay-1">
+            <a class="social-link" data-social="instagram" aria-label="Instagram của bạn ấy">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+                <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="17.5" cy="6.8" r="1" fill="currentColor"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+            <a class="social-link" data-social="tiktok" aria-label="TikTok của bạn ấy">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.6 8.2a7.1 7.1 0 0 1-4.3-1.5v7.1a5.7 5.7 0 1 1-5-5.6v3.1a2.7 2.7 0 1 0 2 2.6V2.5h3a4.2 4.2 0 0 0 4.3 4.2z"/>
+              </svg>
+              <span>TikTok</span>
+            </a>
+            <a class="social-link" data-social="facebook" aria-label="Facebook của bạn ấy">
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M13.6 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.4V13h2.8v8z"/>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </nav>
+        </div>
       </section>
     </main>
 
-    <footer id="contact" class="px-6 pb-8 text-center leading-7 text-slate-500">
-      Được tạo để bắt đầu hành trình học web.
+    <footer class="mx-auto flex max-w-6xl flex-wrap justify-between gap-3 px-6 pb-8 text-sm text-[#777a70] sm:px-10">
+      <p>Một trang nhỏ, dành cho một người đặc biệt.</p>
+      <a class="transition-colors hover:text-[#e76f51]" href="#home">Lên đầu trang ↑</a>
     </footer>
 
     <script type="module" src="/main.js"></script>
